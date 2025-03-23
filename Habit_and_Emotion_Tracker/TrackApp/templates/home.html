@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home - Habit and Emotion Tracker</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Habit and Emotion Tracker</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="{% url 'create_habit' %}">Create a New Habit</a></li>
+            <li><a href="{% url 'log_emotion' %}">Log Your Emotions</a></li>
+            <li><a href="{% url 'mentorship' %}">Mentorship</a></li>
+            <li><a href="{% url 'community' %}">Community Interaction</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h2>About This Tool</h2>
+        <p>This tool helps students build new habits, track their emotions, and stay consistent with the support of mentors and a community.</p>
+    </section>
+    <footer>
+        <p>&copy; 2025 Habit and Emotion Tracker <br>
+            by Asemahle Botha
+        </p>
+    </footer>
+</body>
+</html>
