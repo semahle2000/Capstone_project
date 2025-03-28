@@ -11,10 +11,14 @@ router.register(r'mentorship', MentorshipSessionViewSet)
 router.register(r'community', CommunityPostViewSet)
 
 urlpatterns = [
-    path('', views.home, name="home"),
-    path('Habits', views.create_habit, name="create_habit"),
-    path('mentorship', views.mentorship, name="mentorship"),
-    path('community', views.community, name="community"),
-    path('Emotions', views.log_emotion, name="log_emotion"),
+    path('', views.login_view, name='login'),  # Default route to login
+    path('home/', views.home, name='home'),    # Home route
+    path('Habits', views.create_habit, name='create_habit'),
+    path('mentorship', views.mentorship, name='mentorship'),
+    path('community', views.community, name='community'),
+    path('Emotions', views.log_emotion, name='log_emotion'),
+    path('register/', views.register, name='register'),
+    path('login/', views.login_view, name='login'),
+    path('logout/', views.logout_view, name='logout'),
     path('api/', include(router.urls)),
 ]
