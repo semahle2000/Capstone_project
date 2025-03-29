@@ -14,6 +14,7 @@ urlpatterns = [
     path('', views.login_view, name='login'),  # Default route to login
     path('home/', views.home, name='home'),    # Home route
     path('Habits', views.create_habit, name='create_habit'),
+    path('habit_tracker/', views.habit_tracker, name='habit_tracker'),
     path('mentorship', views.mentorship, name='mentorship'),
     path('community', views.community, name='community'),
     path('Emotions', views.log_emotion, name='log_emotion'),

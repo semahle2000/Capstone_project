@@ -24,6 +24,7 @@ class Habit(models.Model):
     date = models.DateField()
     emotion = models.CharField(max_length=100)
     notes = models.TextField(blank=True, null=True)
+    accomplished = models.BooleanField(default=False)
 
 class Emotion(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='emotions')

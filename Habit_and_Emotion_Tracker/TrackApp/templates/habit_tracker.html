@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Habit Tracker</title>
+</head>
+<body>
+    <h1>Habit Tracker</h1>
+    <table>
+        <tr>
+            <th>Habit</th>
+            <th>Date</th>
+            <th>Emotion</th>
+            <th>Notes</th>
+            <th>Accomplished</th>
+        </tr>
+        {% for habit in habits %}
+        <tr>
+            <td>{{ habit.name }}</td>
+            <td>{{ habit.date }}</td>
+            <td>{{ habit.emotion }}</td>
+            <td>{{ habit.notes }}</td>
+            <td>
+                <form method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="habit_id" value="{{ habit.id }}">
+                    <button type="submit">{{ habit.accomplished|yesno:"Yes,No" }}</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

@@ -9,7 +9,7 @@ class UserSerializer(serializers.ModelSerializer):
 class HabitSerializer(serializers.ModelSerializer):
     class Meta:
         model = Habit
-        fields = ['id', 'user', 'name', 'date', 'emotion', 'notes']
+        fields = ['id', 'user', 'name', 'date', 'emotion', 'notes', 'accomplished']
 
 class EmotionSerializer(serializers.ModelSerializer):
     class Meta:

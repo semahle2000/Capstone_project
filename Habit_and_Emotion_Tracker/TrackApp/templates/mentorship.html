@@ -1,1 +1,26 @@
-Welcome to Mentorship Page
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mentorship</title>
+</head>
+<body>
+    <h1>Mentorship Sessions</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="mentor">Mentor:</label>
+        <input type="text" id="mentor" name="mentor" required><br><br>
+        
+        <label for="student">Student:</label>
+        <input type="text" id="student" name="student" required><br><br>
+        
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required><br><br>
+        
+        <label for="feedback">Feedback:</label>
+        <textarea id="feedback" name="feedback"></textarea><br><br>
+        
+        <button type="submit">Log Session</button>
+    </form>
+</body>
+</html>

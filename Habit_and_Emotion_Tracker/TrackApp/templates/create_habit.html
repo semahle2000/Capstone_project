@@ -1,1 +1,26 @@
-Welcome To create_habit page
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Habit</title>
+</head>
+<body>
+    <h1>Create a New Habit</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="name">Habit Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required><br><br>
+        
+        <label for="emotion">Emotion:</label>
+        <input type="text" id="emotion" name="emotion" required><br><br>
+        
+        <label for="notes">Notes:</label>
+        <textarea id="notes" name="notes"></textarea><br><br>
+        
+        <button type="submit">Create Habit</button>
+    </form>
+</body>
+</html>

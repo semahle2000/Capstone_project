@@ -38,7 +38,25 @@ def logout_view(request):
 
 @login_required
 def create_habit(request):
+    if request.method == 'POST':
+        name = request.POST['name']
+        date = request.POST['date']
+        emotion = request.POST['emotion']
+        notes = request.POST.get('notes', '')
+        habit = Habit(user=request.user, name=name, date=date, emotion=emotion, notes=notes)
+        habit.save()
+        return redirect('habit_tracker')
     return render(request, 'create_habit.html')
+
+@login_required
+def habit_tracker(request):
+    habits = Habit.objects.filter(user=request.user)
+    if request.method == 'POST':
+        habit_id = request.POST['habit_id']
+        habit = Habit.objects.get(id=habit_id)
+        habit.accomplished = not habit.accomplished
+        habit.save()
+    return render(request, 'habit_tracker.html', {'habits': habits})
 
 @login_required
 def log_emotion(request):
