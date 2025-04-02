@@ -16,6 +16,7 @@ urlpatterns = [
     path('Habits', views.create_habit, name='create_habit'),
     path('habit_tracker/', views.habit_tracker, name='habit_tracker'),
     path('mentorship', views.mentorship, name='mentorship'),
+    path('start_one_on_one_session/', views.start_one_on_one_session, name='start_one_on_one_session'),
     path('community', views.community, name='community'),
     path('Emotions', views.log_emotion, name='log_emotion'),
     path('register/', views.register, name='register'),

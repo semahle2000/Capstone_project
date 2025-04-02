@@ -3,24 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <title>Mentorship</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
 </head>
 <body>
-    <h1>Mentorship Sessions</h1>
-    <form method="post">
-        {% csrf_token %}
-        <label for="mentor">Mentor:</label>
-        <input type="text" id="mentor" name="mentor" required><br><br>
-        
-        <label for="student">Student:</label>
-        <input type="text" id="student" name="student" required><br><br>
-        
-        <label for="date">Date:</label>
-        <input type="date" id="date" name="date" required><br><br>
-        
-        <label for="feedback">Feedback:</label>
-        <textarea id="feedback" name="feedback"></textarea><br><br>
-        
-        <button type="submit">Log Session</button>
-    </form>
+    <header>
+        <h1>Mentorship Sessions</h1>
+    </header>
+    <section>
+        <form method="post">
+            {% csrf_token %}
+            <label for="mentor">Mentor:</label>
+            <input type="text" id="mentor" name="mentor" required><br><br>
+            
+            <label for="student">Student:</label>
+            <input type="text" id="student" name="student" required><br><br>
+            
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required><br><br>
+            
+            <label for="feedback">Feedback:</label>
+            <textarea id="feedback" name="feedback"></textarea><br><br>
+            
+            <button type="submit">Log Session</button>
+        </form>
+    </section>
+    <section>
+        <h2>Join a One-on-One Session</h2>
+        <form method="post" action="{% url 'start_one_on_one_session' %}">
+            {% csrf_token %}
+            <input type="hidden" name="start_one_on_one_session" value="1">
+            <button type="submit" class="one-on-one-button">Start One-on-One Session</button>
+        </form>
+        {% if meeting_link %}
+        <p>Join the session: <a href="{{ meeting_link }}" target="_blank">{{ meeting_link }}</a></p>
+        {% endif %}
+    </section>
+    <footer>
+        <p>&copy; 2025 Habit and Emotion Tracker <br>
+            by Asemahle Botha
+        </p>
+    </footer>
 </body>
 </html>

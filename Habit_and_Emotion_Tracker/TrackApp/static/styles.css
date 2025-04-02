@@ -1,9 +1,17 @@
+/* styles.css */
+
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    color: #ffffff;
+    color: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
@@ -11,12 +19,27 @@ header {
     color: #ffa500; /* Orange */
     padding: 1em 0;
     text-align: center;
+    width: 100%;
 }
 
-nav {
+section {
+    padding: 2em;
+    text-align: center;
+    background-color: #000000; /* Black */
+    color: #f5f5f5; /* Light gray */
+}
+
+footer {
     background-color: #333333; /* Dark gray */
+    color: #ffa500; /* Orange */
+    text-align: center;
+    padding: 1em 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
 
+/* Navigation Styles */
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -40,18 +63,109 @@ nav ul li a:hover {
     background-color: #575757; /* Lighter gray */
 }
 
-section {
-    padding: 2em;
-    text-align: center;
-    background-color: #000000; /* Black */
+/* Table Styles for Habit Tracker */
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #000000; /* Black text for better readability */
 }
 
-footer {
-    background-color: #333333; /* Dark gray */
-    color: #ffa500; /* Orange */
-    text-align: center;
-    padding: 1em 0;
-    position: fixed;
+th, td {
+    padding: 12px;
+    border: 1px solid #dddddd;
+    text-align: left;
+}
+
+th {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Button Styles */
+button {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
     width: 100%;
-    bottom: 0;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Form Styles */
+form {
+    background-color: #ffffff;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: left;
+    margin: 20px auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5em;
+    color: #333333;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+}
+
+/* Container Styles for Login and Register Pages */
+.container {
+    background-color: #ffffff;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    margin: 20px auto;
+}
+
+h2 {
+    color: #333333;
+    margin-bottom: 1em;
+}
+
+p {
+    margin-top: 1em;
+    color: #333333;
+}
+
+a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* One-on-One Session Button */
+.one-on-one-button {
+    background-color: #007BFF; /* Blue */
+}
+
+.one-on-one-button:hover {
+    background-color: #0056b3;
 }

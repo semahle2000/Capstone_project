@@ -3,18 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Log Emotion</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
 </head>
 <body>
-    <h1>Log Your Emotion</h1>
-    <form method="post">
-        {% csrf_token %}
-        <label for="date">Date:</label>
-        <input type="date" id="date" name="date" required><br><br>
-        
-        <label for="emotion">Emotion:</label>
-        <input type="text" id="emotion" name="emotion" required><br><br>
-        
-        <button type="submit">Log Emotion</button>
-    </form>
+    <header>
+        <h1>Log Your Emotion</h1>
+    </header>
+    <section>
+        <form method="post">
+            {% csrf_token %}
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required><br><br>
+            
+            <label for="emotion">Emotion:</label>
+            <input type="text" id="emotion" name="emotion" required><br><br>
+            
+            <button type="submit">Log Emotion</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2025 Habit and Emotion Tracker <br>
+            by Asemahle Botha
+        </p>
+    </footer>
 </body>
 </html>

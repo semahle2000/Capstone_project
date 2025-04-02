@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Community</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
 </head>
 <body>
     <h1>Community Posts</h1>
@@ -22,5 +24,10 @@
             <small>Posted by {{ post.user.username }} on {{ post.created_at }}</small>
         </div>
     {% endfor %}
+<footer>
+        <p>&copy; 2025 Habit and Emotion Tracker <br>
+            by Asemahle Botha
+        </p>
+</footer>
 </body>
 </html>

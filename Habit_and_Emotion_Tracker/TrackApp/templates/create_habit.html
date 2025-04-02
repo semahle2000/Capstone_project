@@ -3,24 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <title>Create Habit</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
 </head>
 <body>
-    <h1>Create a New Habit</h1>
-    <form method="post">
-        {% csrf_token %}
-        <label for="name">Habit Name:</label>
-        <input type="text" id="name" name="name" required><br><br>
-        
-        <label for="date">Date:</label>
-        <input type="date" id="date" name="date" required><br><br>
-        
-        <label for="emotion">Emotion:</label>
-        <input type="text" id="emotion" name="emotion" required><br><br>
-        
-        <label for="notes">Notes:</label>
-        <textarea id="notes" name="notes"></textarea><br><br>
-        
-        <button type="submit">Create Habit</button>
-    </form>
+    <header>
+        <h1>Create a New Habit</h1>
+    </header>
+    <section>
+        <form method="post">
+            {% csrf_token %}
+            <label for="name">Habit Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required><br><br>
+            
+            <label for="emotion">Emotion:</label>
+            <input type="text" id="emotion" name="emotion" required><br><br>
+            
+            <label for="notes">Notes:</label>
+            <textarea id="notes" name="notes"></textarea><br><br>
+            
+            <button type="submit">Create Habit</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2025 Habit and Emotion Tracker <br>
+            by Asemahle Botha
+        </p>
+    </footer>
 </body>
 </html>

@@ -3,32 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <title>Habit Tracker</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
 </head>
 <body>
-    <h1>Habit Tracker</h1>
-    <table>
-        <tr>
-            <th>Habit</th>
-            <th>Date</th>
-            <th>Emotion</th>
-            <th>Notes</th>
-            <th>Accomplished</th>
-        </tr>
-        {% for habit in habits %}
-        <tr>
-            <td>{{ habit.name }}</td>
-            <td>{{ habit.date }}</td>
-            <td>{{ habit.emotion }}</td>
-            <td>{{ habit.notes }}</td>
-            <td>
-                <form method="post">
-                    {% csrf_token %}
-                    <input type="hidden" name="habit_id" value="{{ habit.id }}">
-                    <button type="submit">{{ habit.accomplished|yesno:"Yes,No" }}</button>
-                </form>
-            </td>
-        </tr>
-        {% endfor %}
-    </table>
+    <header>
+        <h1>Habit Tracker</h1>
+    </header>
+    <section>
+        <table>
+            <tr>
+                <th>Habit</th>
+                <th>Date</th>
+                <th>Emotion</th>
+                <th>Notes</th>
+                <th>Accomplished</th>
+            </tr>
+            {% for habit in habits %}
+            <tr>
+                <td>{{ habit.name }}</td>
+                <td>{{ habit.date }}</td>
+                <td>{{ habit.emotion }}</td>
+                <td>{{ habit.notes }}</td>
+                <td>
+                    <form method="post">
+                        {% csrf_token %}
+                        <input type="hidden" name="habit_id" value="{{ habit.id }}">
+                        <button type="submit">{{ habit.accomplished|yesno:"Yes,No" }}</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </section>
+    <footer>
+        <p>&copy; 2025 Habit and Emotion Tracker <br>
+            by Asemahle Botha
+        </p>
+    </footer>
 </body>
 </html>
