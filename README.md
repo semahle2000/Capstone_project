@@ -26,6 +26,6 @@ The Habit and Emotion Tracker is a Django-based web application designed to help
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/yourusername/Habit_and_Emotion_Tracker.git
+   git clone https://github.com/semahle2000/Capstone_project.git
    cd Habit_and_Emotion_Tracker
    ```
