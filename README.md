@@ -9,9 +9,10 @@ The Habit and Emotion Tracker is a Django-based web application designed to help
 - **User Authentication**: Secure user registration and login system.
 - **Habit Tracking**: Users can add, update, and delete habits they want to track.
 - **Emotion Tracking**: Users can log their emotions and associate them with specific habits or events.
-- **Analytics Dashboard**: Visual representation of habit and emotion data to help users identify patterns.
+- **Mentorship**:users can book session with mentors or professional counsellors to help students to deal with destortions or mental disorders.
 - **Reminders**: Set reminders for habits to encourage consistency.
-- **Integration with Zoom**: Schedule and track online meetings and activities.
+- **Community**:users can be able to understand that they are not alone on this journey, there are people with the same challenges and the are able to motivate each other in being consistent.
+- **Integration with Zoom**: Schedule and track online meetings and activities such as having a one on one with your mentor or psychologist.
 
 ## Installation
 
